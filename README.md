@@ -1,9 +1,9 @@
-Text Parser for Information Retrieval (IR) Engine
-Overview
+# Text Parser for Information Retrieval (IR) Engine Overview
 This project implements a Text Parser, which serves as the first component of an Information Retrieval (IR) engine. The parser processes documents, tokenizes the content, removes stopwords, stems the remaining tokens, and generates dictionaries for both terms and documents.
 
-Features
+# Features
 Tokenizer: Splits the text into tokens, removes numbers, and converts tokens to lowercase.
+
 Stopword Removal: Eliminates common stopwords from the token list.
 Stemming: Applies the Porter stemming algorithm to reduce words to their base forms.
 Word Dictionary: Maps each unique token to a unique numerical ID.
