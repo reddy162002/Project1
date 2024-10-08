@@ -12,7 +12,7 @@ Word Dictionary: This dictionary is created to map each unique token to a unique
 
 File Dictionary: This dictionary is also created to map each document to a unique ID.
 
-# The inputs processed are stored as output data into parser_output.txt
+## The inputs processed are stored as output data into parser_output.txt
 
 ## The files that are included in this project zip file are:
 Project1_PythonCode.py: The main Python script that contains all text parsing functionalities.
