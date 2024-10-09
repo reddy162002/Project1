@@ -1,76 +1,86 @@
 # Text Parser for Information Retrieval (IR) Engine
-This project mainly implements a text parser that is the first component of Information Retrieval (IR) engine. This parser does some tasks like processing documents, tokenizing the text, removing stopwords and stemming all the remaining words and generating word and file dictionaries.
 
-## Features
-Tokenizer: Used for tokenization and splits text into tokens by removing numbers and converting tokens into lowercase. 
+This project implements a text parser, which serves as the initial component of an Information Retrieval (IR) engine. The parser performs several key tasks such as document processing, tokenization, removing stopwords, stemming the remaining tokens, and creating word and file dictionaries.
 
-Removing stopwords: Eliminating some common stopwords from the token list. 
+## Key Features
+Tokenizer: Breaks down text into individual tokens by excluding numbers and converting all tokens to lowercase.
+Stopwords Removal: Filters out common stopwords from the list of tokens.
+Stemming: Applies the Porter Stemming Algorithm to reduce tokens to their base or root forms.
+Word Dictionary: Creates a mapping between each unique token and a corresponding unique ID.
+File Dictionary: Creates a mapping between each document and its own unique ID.
 
-Stemming: This stemming is done by applying Porter stemming algorithm that helps in reducing words to their base forms. 
+ ## Output
 
-Word Dictionary: This dictionary is created to map each unique token to a unique ID.
+The processed data is saved in `parser_output.txt`.
 
-File Dictionary: This dictionary is also created to map each document to a unique ID.
+## Project Files
 
-## The inputs processed are stored as output data into parser_output.txt
+The following files are included within this project:
 
-## The files that are included in this project zip file are:
-Project1_PythonCode.py: The main Python script that contains all text parsing functionalities.
+ **chandumukkamala.py**: The primary Python script that implements all text parsing functionalities.
+  
+ **Input_Files**: A folder that contains all the `.txt` input files that need to be parsed.
+  
+ **stopwordlist.txt:** A file that contains a list of commonly used stopwords.
+  
+ **parser_output.txt:** The output file where the parsing results are saved.
+  
+ **WordDictionary.txt:** A file that maps each unique word to its unique ID.
+  
+ **FileDictionary.txt:** A file that maps each document to its unique ID.
 
-input_files: A directory that contains all input files in the form of .txt that are to be parsed.
+## Requirements for Project Completion
 
-stopwordlist.txt: A file that contains a list of common stopwords.
+### Python Version
 
-parser_output.txt: The output file where the results that are parsed are stored.
+ Python 3.x or higher.
 
-WordDictionary.txt: A file that maps unique words to unique ID's. 
+### Required Python Libraries
 
-FileDictionary.txt: A file that maps document names to unique ID's.
+ **nltk:** This library is required for stemming functionality.
 
-## Requirements that are needed to complete this project1 are:
 
-### Python 3.x
+## Running the Program
 
-### Required Python libraries:
-nltk: Library that is necessary for stemming.
+### Preparing Input Files:
 
-### To install the necessary package, run:
-bash
-Copy code
-pip install nltk
+1. To begin, create a folder called `Input_Files` and fill it with all of the `.txt` files you wish to process.
+2. Verify that the same directory has the `stopwordlist.txt` file as well.
 
-### How to Run the Program
-#### Prepare Input Files:
+### Running the Script:
 
-Create a directory named input_files and place all the .txt files you want to parse into this folder or directory. 
-Ensure that stopwordlist.txt is also there.
-#### Run and execute the script present in the .py file given below:
-Project1_PythonCode.py
+Execute the `chandumukkamala.py` script. This script processes all `.txt` files in the `input_files` directory by performing tokenization, removing stopwords, and stemming the remaining tokens. The results are saved into `parser_output.txt`, `WordDictionary.txt`, and `FileDictionary.txt`.
 
-Next, this script will process all .txt files in the input_files directory and perfrom tokenization, stopwords removal, stemming all other words that are left and next the output is saved into parser_output.txt, WordDictionary.txt, and FileDictionary.txt.
+### Output Files
 
-#### Output: After the script runs successfully, the below .txt files are found:
+After running the script, the following output files will be generated:
 
-parser_output.txt: Contains the document IDs and the tokens along with their ID's.
+ **parser_output.txt:** Contains document IDs and the corresponding tokens along with their unique IDs.
+  
+ **WordDictionary.txt:** Contains all unique tokens and their IDs.
+  
+ **FileDictionary.txt:** Contains document names and their IDs.
 
-WordDictionary.txt: Contains the unique tokens and ID's.
+### Sample Output (from `parser_output.txt`):
 
-FileDictionary.txt: Contains the document names and IDs.
-
-#### Example Output (from parser_output.txt):
 
 Document: sample1.txt, ID: 1
-example	1
-test	2
-sample	3
+example    1
+test       2
+sample     3
 
 Document: sample2.txt, ID: 2
 ...
 
-#### Troubleshooting is done to ensure: 
-Whether the input_files directory contains valid .txt files and that the files are not empty and 
-Stopwords File contains stopwords in a properly formatted manner (one word per line).
 
-#### By:
-#### Name: Reddy Krishna Reddy Yeddula 
-#### Email ID: ReddyKrishnaReddyYeddula@my.unt.edu  
+## Troubleshooting Tips
+
+ Verify that there are actual `.txt} files in the {Input_Files} directory and that none of the files are empty.
+
+ Check that every stopword is on a different line in the `stopwordlist.txt` file, and that the formatting is proper.
+
+
+**Author Information:**
+
+**Name:** Harichandana Mukkamala  
+**Email ID:** Harichandana Mukkamala@my.unt.edu 
